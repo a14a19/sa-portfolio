@@ -1,35 +1,20 @@
-import { Link } from "react-router-dom";
-import Clock from "react-clock";
-import { useEffect, useState } from "react";
+import { Link } from "react-router-dom"
+import Clock from "../clock/Clock";
 
 function SmallCard(props) {
-   const [value, setValue] = useState(new Date());
-
-   useEffect(() => {
-      const interval = setInterval(() => setValue(new Date()), 1000);
-
-      return () => {
-         clearInterval(interval);
-      };
-   }, []);
 
    return (
       <>
          {props.type === "TIME" && (
             <aside className="w-[50%] pt-1 border border-[#d8d8d830] bg-[#1e1e1e] rounded-xl">
-               <div className="flex items-center justify-between px-3 py-1">
-                  <Link className="w-full text-xs">TIME</Link>
-                  <p className="text-xs text-gray-500">India</p>
-               </div>
-               <div className="mx-2 mt-1 border-b-2 border-[#d8d8d830]"></div>
-               <div className="h-[8.375rem] px-3">
-                  <Clock
-                     value={value}
-                     color="white"
-                     useMillisecondPrecision={true}
-                     className="flex w-full h-full"
-                  />
-               </div>
+                <div className="flex justify-between items-center py-1 px-3">
+                    <Link className="text-xs w-full">TIME</Link>
+                    <p className="text-xs text-gray-500">India</p>
+                </div>
+                <div className="mx-2 mt-1 border-b-2 border-[#d8d8d830]"></div>
+                <div className="h-[8.375rem] px-3 relative">
+                    <Clock />
+                </div>
             </aside>
          )}
          {props.type === "MODE" && (

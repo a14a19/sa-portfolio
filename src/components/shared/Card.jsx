@@ -5,6 +5,7 @@ import { education } from "../../data/education";
 import SmallCard from "./SmallCard";
 
 function Card(props) {
+  
    // console.log(props.type)
    return (
       <>
@@ -35,8 +36,17 @@ function Card(props) {
          )}
          {props.type === "TIMEMODE" && (
             <aside className="w-[33.333%] flex gap-5 h-min">
-               <SmallCard type={"TIME"} />
-               <SmallCard type={"MODE"} />
+               <div className="flex gap-5">
+                    <SmallCard type={"TIME"} />
+                    <SmallCard type={"MODE"} />
+                </div>
+                <aside className="w-full h-min pt-1 border border-[#d8d8d830] bg-[#1e1e1e] rounded-xl overflow-hidden">
+                    <Link className="text-xs w-full px-3">WHAT I DO</Link>
+                    <div className="mx-2 border-b-2 mt-1 border-[#d8d8d830]" ></div>
+                    <div className="h-[19.43rem] overflow-y-auto px-3 pt-3 flex flex-col gap-3 relative">
+                        <button className="px-3 py-2 bg-[#fac99c] w-min whitespace-nowrap text-sm text-black rounded-lg pm-animate absolute top-10 left-8">Product Manager</button>
+                    </div>
+                </aside>
             </aside>
          )}
          {props.type === "PROJECT" && (
