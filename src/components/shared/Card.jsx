@@ -75,6 +75,41 @@ function Card(props) {
                <div className="h-[20.625rem] overflow-y-auto px-3 pt-3 flex flex-col gap-3 text-xs"></div>
             </aside>
          )}
+         {props.type === "YEARSPROCTAS" && (
+            <aside className="w-[33.333%] flex gap-5 h-min">
+               <SmallCard type={"YEARSPRO"} />
+               <SmallCard type={"CTAS"} />
+            </aside>
+         )}
+         {props.type === "EDUCATION" && (
+            <aside className="w-[33.333%] h-min pt-1 border border-[#d8d8d830] bg-[#1e1e1e] rounded-xl overflow-hidden">
+               <Link className="w-full px-3 text-xs">EDUCATION</Link>
+               <div className="mx-2 border-b-2 mt-1 border-[#d8d8d830]"></div>
+               <div className="h-[20.625rem] overflow-y-auto px-3 pt-3 flex flex-col gap-3 ">
+                  {/* {project &&
+                     project.map((elem, i) => {
+                        return (
+                           <div
+                              className="px-3 py-2 flex gap-5 justify-between items-center bg-[#1b1b1b] rounded-lg"
+                              key={i}
+                           >
+                              <img
+                                 src={elem.img}
+                                 alt=""
+                                 className="h-10 rounded-full ms-2"
+                              />
+                              <div>
+                                 <h3 className="text-xs">{elem.title}</h3>
+                                 <p className="text-xs mt-1 text-[#d8d8d880]">
+                                    {elem.description}
+                                 </p>
+                              </div>
+                           </div>
+                        );
+                     })} */}
+               </div>
+            </aside>
+         )}
       </>
    );
 }
