@@ -25,7 +25,7 @@ function SmallCard(props) {
                </div>
                <div className="mx-2 mt-1 border-b-2 border-[#d8d8d830]"></div>
                <div className="h-[8.375rem] px-3 pt-2 text-xs">
-                  Out of office. Enjoying the Canadian winter.
+                  Out of office. Enjoying the Indian winter.
                </div>
             </aside>
          )}

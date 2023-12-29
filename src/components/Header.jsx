@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import sridhar from "../assets/Sridhar_A.png";
 
 function Header() {
@@ -12,9 +13,9 @@ function Header() {
             </div>
             <div></div>
             <div>
-                <button className="border border-[#d8d8d830] px-3 py-1 rounded-xl text-xs bg-[#292929]">
-                    Contact
-                </button>
+                <Link to="mailto:hi@sridhar.fyi" className="border border-[#d8d8d830] px-3 py-1 rounded-xl text-xs bg-[#292929]">
+                    Contact &#8599;
+                </Link>
             </div>
         </header>
     )
