@@ -35,7 +35,7 @@ function Card(props) {
             </aside>
          )}
          {props.type === "TIMEMODE" && (
-            <aside className="w-[33.333%] flex gap-5 h-min">
+            <aside className="w-[33.333%] flex flex-col gap-5 h-min">
                <div className="flex gap-5">
                     <SmallCard type={"TIME"} />
                     <SmallCard type={"MODE"} />
