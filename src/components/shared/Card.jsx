@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { experience } from "../../data/experience";
 import { project } from "../../data/project";
+import { education } from "../../data/education";
 import SmallCard from "./SmallCard";
 
 function Card(props) {
@@ -72,7 +73,14 @@ function Card(props) {
             <aside className="w-[33.333%] h-min pt-1 border border-[#d8d8d830] bg-[#1e1e1e] rounded-xl overflow-hidden">
                <Link className="w-full px-3 text-xs">KIND WORDS</Link>
                <div className="mx-2 border-b-2 mt-1 border-[#d8d8d830]"></div>
-               <div className="h-[20.625rem] overflow-y-auto px-3 pt-3 flex flex-col gap-3 text-xs"></div>
+               <div className="h-[20.625rem] overflow-y-auto px-3 pt-3 flex flex-col gap-3 text-xs">
+                  <p>
+                     Sridhar, founder and CEO, embarked on the entrepreneurial
+                     journey in 2020 with Famwork in healthcare, later
+                     diversifying into various fields, and currently crafting
+                     innovative ventures in stealth mode.
+                  </p>
+               </div>
             </aside>
          )}
          {props.type === "YEARSPROCTAS" && (
@@ -86,27 +94,24 @@ function Card(props) {
                <Link className="w-full px-3 text-xs">EDUCATION</Link>
                <div className="mx-2 border-b-2 mt-1 border-[#d8d8d830]"></div>
                <div className="h-[20.625rem] overflow-y-auto px-3 pt-3 flex flex-col gap-3 ">
-                  {/* {project &&
-                     project.map((elem, i) => {
+                  {education &&
+                     education.map((elem, i) => {
                         return (
                            <div
                               className="px-3 py-2 flex gap-5 justify-between items-center bg-[#1b1b1b] rounded-lg"
                               key={i}
                            >
-                              <img
-                                 src={elem.img}
-                                 alt=""
-                                 className="h-10 rounded-full ms-2"
-                              />
                               <div>
-                                 <h3 className="text-xs">{elem.title}</h3>
+                                 <h3 className="text-xs">
+                                    {elem.degree} // {elem.type}
+                                 </h3>
                                  <p className="text-xs mt-1 text-[#d8d8d880]">
-                                    {elem.description}
+                                    {elem.university}
                                  </p>
                               </div>
                            </div>
                         );
-                     })} */}
+                     })}
                </div>
             </aside>
          )}

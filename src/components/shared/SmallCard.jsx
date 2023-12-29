@@ -51,6 +51,7 @@ function SmallCard(props) {
                   <Link className="w-full text-xs">YEARS PRO</Link>
                </div>
                <div className="mx-2 mt-1 border-b-2 border-[#d8d8d830]"></div>
+               <div className="flex justify-center text-8xl">8</div>
             </aside>
          )}
          {props.type === "CTAS" && (
@@ -59,7 +60,31 @@ function SmallCard(props) {
                   <Link className="w-full text-xs">CTAs</Link>
                </div>
                <div className="mx-2 mt-1 border-b-2 border-[#d8d8d830]"></div>
-               <div className="h-[8.375rem] px-3 pt-2 text-xs"></div>
+               <div className="flex justify-center h-[8.375rem] px-3 pt-2 text-xs">
+                  <div className="flex flex-col w-full gap-2">
+                     <a
+                        className="flex p-2 border rounded-3xl"
+                        href="mailto:hi@sridhar.fyi"
+                     >
+                        Contact Me
+                        <p className="ml-auto">&#8599;</p>
+                     </a>
+                     <a
+                        className="flex p-2 border rounded-3xl"
+                        href="https://www.linkedin.com/company/sridhar-arunagiri/about/"
+                     >
+                        Connect
+                        <p className="ml-auto">&#8599;</p>
+                     </a>
+                     <a
+                        className="flex p-2 border rounded-3xl"
+                        href="https://topmate.io/sridhar_a"
+                     >
+                        Topmate.io
+                        <p className="ml-auto">&#8599;</p>
+                     </a>
+                  </div>
+               </div>
             </aside>
          )}
       </>
