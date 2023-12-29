@@ -40,11 +40,11 @@
 }
 
 .pm-animate {
-  animation: card 5s alternate-reverse infinite;
+  animation: pm-animate 5s linear infinite;
   transition: all 1s;
 }
 
-@keyframes card {
+@keyframes pm-animate {
   0% {
     transform: translate(-20px, -20px);
   }
@@ -54,4 +54,43 @@
   100% {
     transform: translate(-20px, -20px);
   }
+}
+
+.strategy-animate {
+  animation: strategy-animate 5s linear infinite;
+  transition: all 1s;
+}
+
+@keyframes strategy-animate {
+  0% {
+    transform: translate(-20px, 20px);
+  }
+  50% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(-20px, 20px);
+  }
+}
+
+.brand-animate {
+  animation: pm-animate 5s linear infinite;
+  transition: all 1s;
+}
+
+@keyframes ux-animate {
+  0% {
+    transform: translate(20px, 0px);
+  }
+  50% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(20px, 0px);
+  }
+}
+
+.ux-animate {
+  animation: ux-animate 5s linear infinite;
+  transition: all 1s;
 }
