@@ -11,7 +11,7 @@ export const experience = [
     },
     {
         title: "Partner // SLA",
-        description: "Delivering expert legal counsel, overseeing client relations, and guiding strategic initiatives to ensure effective legal representation and client success.",
+        description: "Drive business growth and client relations in law firms, overseeing operations for efficiency and strategic management.",
         location: "- New York"
     },
     {
@@ -23,6 +23,11 @@ export const experience = [
         title: "Founder // iUXD Studio",
         description: "Shaping creative vision, spearheading innovative design, and enhancing user experiences to redefine brand interactions.",
         location: "- Chennai, India"
+    },
+    {
+        title: "CEO & Founder // Famwork",
+        description: "Guiding vision, leading strategy for healthcare transformation with cutting-edge EHR innovations.",
+        location: "- Chennai, India & Bay Area, USA"
     },
     {
         title: "Software Engineer & Product Manager // Various Startup",

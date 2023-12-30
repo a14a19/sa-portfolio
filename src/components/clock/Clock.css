@@ -33,27 +33,30 @@
   height: 33px;
   background: #868686;
   top: 26.5%;
-  left: 50%;
+  left: 48%;
   transform-origin: bottom;
+  border-radius: 5px;
 }
 
 .min_hand {
+  border-radius: 4px;
   position: absolute;
   width: 4px;
   height: 42px;
   background: #444;
-  top: 20.5%;
+  top: 14.5%;
   left: 48%;
   transform-origin: bottom;
 }
 
 .sec_hand {
+  border-radius: 2px;
   position: absolute;
   width: 2px;
   height: 47px;
   background: red;
-  top: 15.5%;
-  left: 50%;
+  top: 12.5%;
+  left: 49%;
   transform-origin: bottom;
 }
 

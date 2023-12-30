@@ -7,14 +7,14 @@ function SmallCard(props) {
       <>
          {props.type === "TIME" && (
             <aside className="w-[50%] pt-1 border border-[#d8d8d830] bg-[#1e1e1e] rounded-xl">
-                <div className="flex justify-between items-center py-1 px-3">
-                    <Link className="text-xs w-full">TIME</Link>
-                    <p className="text-xs text-gray-500">India</p>
-                </div>
-                <div className="mx-2 mt-1 border-b-2 border-[#d8d8d830]"></div>
-                <div className="h-[8.375rem] px-3 relative">
-                    <Clock />
-                </div>
+               <div className="flex justify-between items-center py-1 px-3">
+                  <Link className="text-xs w-full">TIME</Link>
+                  <p className="text-xs text-gray-500">India</p>
+               </div>
+               <div className="mx-2 mt-1 border-b-2 border-[#d8d8d830]"></div>
+               <div className="h-[8.375rem] px-3 relative">
+                  <Clock />
+               </div>
             </aside>
          )}
          {props.type === "MODE" && (
@@ -31,12 +31,18 @@ function SmallCard(props) {
          )}
 
          {props.type === "YEARSPRO" && (
-            <aside className="w-[50%] pt-1 border border-[#d8d8d830] bg-[#1e1e1e] rounded-xl">
-               <div className="flex items-center justify-between px-3 py-1">
-                  <Link className="w-full text-xs">YEARS PRO</Link>
+            <aside className="w-[50%] pt-1 border border-[#d8d8d830] bg-[#1e1e1e] rounded-xl flex flex-col gap-3">
+               <div className="flex gap-3 items-end h-[45%] border border-gray-500 rounded-lg px-3 mx-1.5">
+                  <div className="text-7xl">8</div>
+                  <div className=" text-xs flex items-center justify-between py-2">
+                     YEARS PRO
+                  </div>
                </div>
-               <div className="mx-2 mt-1 border-b-2 border-[#d8d8d830]"></div>
-               <div className="flex justify-center text-8xl">8</div>
+               {/* <div className="mx-2 mt-1 border-b-2 border-[#d8d8d830]"></div> */}
+               <div className="flex gap-3 items-end h-[45%] border border-gray-500 rounded-lg pb-1 px-3 mx-1.5">
+                  <div className="flex justify-center text-3xl">7744</div>
+                  <div className="whitespace-nowrap w-min">Cb Rank</div>
+               </div>
             </aside>
          )}
          {props.type === "CTAS" && (

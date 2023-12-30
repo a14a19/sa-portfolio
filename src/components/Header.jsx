@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import sridhar from "../assets/Sridhar_A.png";
+import sridhar from "../assets/sridhar.jpeg";
 
 function Header() {
     return (
@@ -8,7 +8,7 @@ function Header() {
                 <img src={sridhar} alt="" className="h-12 rounded-full me-4" />
                 <div>
                     <h3 className="text-sm">Sridhar A</h3>
-                    <h4 className="text-xs text-gray-400">Founder. Product Manager. Designer.</h4>
+                    <h4 className="text-xs text-gray-400">Founder. Product Mentor. Investor.</h4>
                 </div>
             </div>
             <div></div>

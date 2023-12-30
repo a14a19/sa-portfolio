@@ -73,11 +73,30 @@
   }
 }
 
-.brand-animate {
-  animation: pm-animate 5s linear infinite;
+.investor-animate {
+  animation: ux-animate 5s linear infinite;
+  transition: all 1s;
+}
+.mentor-animate {
+  animation: strategy-animate 5s linear infinite;
+  transition: all 1s;
+}
+.startup-animate {
+  animation: startup-animate 5s linear infinite;
   transition: all 1s;
 }
 
+@keyframes startup-animate {
+  0% {
+    transform: translate(0px, 20px);
+  }
+  50% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(0px, 20px);
+  }
+}
 @keyframes ux-animate {
   0% {
     transform: translate(20px, 0px);

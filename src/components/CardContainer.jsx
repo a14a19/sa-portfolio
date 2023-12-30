@@ -2,17 +2,22 @@ import Card from "./shared/Card";
 
 function CardContainer() {
    return (
-      <section className="flex flex-col gap-5">
-         <div className="flex gap-5">
-            <Card type={"EXPERIENCE"} />
-            <Card type={"TIMEMODE"} />
-            <Card type={"PROJECT"} />
-         </div>
-         <div className="flex gap-5">
-            <Card type={"KINDWORDS"} />
-            <Card type={"YEARSPROCTAS"} />
-            <Card type={"EDUCATION"} />
-         </div>
+      <section className="grid md:grid-cols-6 grid-cols-4 sm-screen:grid-cols-2 grid-rows-5 gap-5">
+         <Card type={"EXPERIENCE"} />
+         <Card type={"TIME"} />
+         <Card type={"MODE"} />
+         <Card type={"STARTUPS"} />
+         <Card type={"WHATIDO"} />
+         <Card type={"INVESTMENTS"} />
+         <Card type={"YEARPRO"} />
+         <Card type={"CTAS"} />
+         <Card type={"JOBS"} />
+         <Card type={"KINDWORDS"} />
+         <Card type={"COHORT"} />
+         {/* <Card type={"TIMEMODE"} /> */}
+         {/* <Card type={"KINDWORDS-YEARSPROCTAS"} /> */}
+         {/* <Card type={"JOB-COHORT"} /> */}
+         <Card type={"EDUCATION"} />
       </section>
    );
 }
