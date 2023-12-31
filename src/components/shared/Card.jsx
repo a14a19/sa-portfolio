@@ -29,7 +29,7 @@ function Card(props) {
                 <aside className={className(localStorage.getItem("theme"), "sm-screen:row-span-5 row-span-3 col-span-2 h-min pt-1 border border-[#d8d8d830] rounded-xl overflow-hidden")}>
                     <Link className="w-full px-3 text-xs">EXPERIENCE</Link>
                     <div className="mx-2 mt-1 border-b-2 border-[#d8d8d830]"></div>
-                    <div className="h-[32.3rem] overflow-y-auto px-3">
+                    <div className="md:h-[32.3rem] h-[45rem] overflow-y-auto px-3">
                         {experience &&
                             experience.map((elem, i) => {
                                 return (
@@ -51,8 +51,8 @@ function Card(props) {
                 </aside>
             )}
 
-            {props.type === "TIME" && (
-                <aside className="row-span-1 col-span-1 pt-1 border border-[#d8d8d830] bg-[#1e1e1e] rounded-xl">
+            {props.type === "TIMESM" && (
+                <aside className="sm-screen:row-span-1 col-span-1 block md:hidden pt-1 border border-[#d8d8d830] bg-[#1e1e1e] rounded-xl">
                     <div className="flex justify-between items-center py-1 px-3">
                         <Link className="text-xs w-full">TIME</Link>
                         <p className="text-xs text-gray-500">India</p>
@@ -63,8 +63,32 @@ function Card(props) {
                     </div>
                 </aside>
             )}
-            {props.type === "MODE" && (
-                <aside className="row-span-1 col-span-1 pt-1 border border-[#d8d8d830] bg-[#1e1e1e] rounded-xl">
+            {props.type === "MODESM" && (
+                <aside className="sm-screen:row-span-1 col-span-1 block md:hidden pt-1 border border-[#d8d8d830] bg-[#1e1e1e] rounded-xl">
+                    <div className="flex items-center justify-between px-3 py-1">
+                        <Link className="w-full text-xs">MODE</Link>
+                        <div className="bg-[#ffc21d] w-2 h-2 rounded-full shadow-[0_0_5px_1px_rgba(255,194,29,0.5)]"></div>
+                    </div>
+                    <div className="mx-2 mt-1 border-b-2 border-[#d8d8d830]"></div>
+                    <div className="h-[8.375rem] px-3 pt-2 text-xs">
+                        Out of office. Enjoying the Indian winter.
+                    </div>
+                </aside>
+            )}
+            {props.type === "TIMEMD" && (
+                <aside className="row-span-1 col-span-1 md:block hidden pt-1 border border-[#d8d8d830] bg-[#1e1e1e] rounded-xl">
+                    <div className="flex justify-between items-center py-1 px-3">
+                        <Link className="text-xs w-full">TIME</Link>
+                        <p className="text-xs text-gray-500">India</p>
+                    </div>
+                    <div className="mx-2 mt-1 border-b-2 border-[#d8d8d830]"></div>
+                    <div className="h-[8.375rem] px-3 relative">
+                        <Clock />
+                    </div>
+                </aside>
+            )}
+            {props.type === "MODEMD" && (
+                <aside className="row-span-1 col-span-1 md:block hidden pt-1 border border-[#d8d8d830] bg-[#1e1e1e] rounded-xl">
                     <div className="flex items-center justify-between px-3 py-1">
                         <Link className="w-full text-xs">MODE</Link>
                         <div className="bg-[#ffc21d] w-2 h-2 rounded-full shadow-[0_0_5px_1px_rgba(255,194,29,0.5)]"></div>
@@ -126,10 +150,13 @@ function Card(props) {
                         {project &&
                             project.map((elem, i) => {
                                 return (
-                                    <div
-                                        className="px-3 py-2 flex gap-5 justify-between items-center bg-[#1b1b1b] rounded-lg"
+                                    <Link
+                                        className="px-3 py-2 group relative flex gap-5 justify-between items-center bg-[#1b1b1b] rounded-lg"
                                         key={i}
+                                        to={elem.link}
+                                        target="_blank"
                                     >
+                                        <button className="absolute top-0 right-0.5 group-hover:block hidden">&#8599;</button>
                                         <img
                                             src={elem.img}
                                             alt=""
@@ -141,7 +168,7 @@ function Card(props) {
                                                 {elem.description}
                                             </p>
                                         </div>
-                                    </div>
+                                    </Link>
                                 );
                             })}
                     </div>
@@ -155,10 +182,13 @@ function Card(props) {
                         {investment &&
                             investment.map((elem, i) => {
                                 return (
-                                    <div
-                                        className="px-3 py-2 flex gap-5 justify-between items-center bg-[#1b1b1b] rounded-lg"
+                                    <Link
+                                        className="px-3 py-2 group relative flex gap-5 justify-between items-center bg-[#1b1b1b] rounded-lg"
                                         key={i}
+                                        to={elem.link}
+                                        target="_blank"
                                     >
+                                        <button className="absolute top-0 right-0.5 group-hover:block hidden">&#8599;</button>
                                         <img
                                             src={elem.img}
                                             alt=""
@@ -170,7 +200,7 @@ function Card(props) {
                                                 {elem.description}
                                             </p>
                                         </div>
-                                    </div>
+                                    </Link>
                                 );
                             })}
                     </div>

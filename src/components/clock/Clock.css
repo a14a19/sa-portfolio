@@ -32,7 +32,7 @@
   width: 5px;
   height: 33px;
   background: #868686;
-  top: 26.5%;
+  top: 23.5%;
   left: 48%;
   transform-origin: bottom;
   border-radius: 5px;
@@ -44,7 +44,7 @@
   width: 4px;
   height: 42px;
   background: #444;
-  top: 14.5%;
+  top: 15%;
   left: 48%;
   transform-origin: bottom;
 }
@@ -68,7 +68,7 @@
 
 .twelve {
   top: 10px;
-  left: 45%;
+  left: 48%;
 }
 
 .one {

@@ -47,7 +47,7 @@ function Popup() {
                                     >
                                         {title}
                                     </Dialog.Title>
-                                    <div className="mt-2">
+                                    <div className="mt-2 min-h-[6rem]">
                                         <p className="text-sm text-gray-500">
                                             Coming soon...
                                         </p>

@@ -3,9 +3,11 @@ import Card from "./shared/Card";
 function CardContainer() {
    return (
       <section className="grid md:grid-cols-6 grid-cols-4 sm-screen:grid-cols-2 grid-rows-5 gap-5">
+         <Card type={"TIMESM"} />
+         <Card type={"MODESM"} />
          <Card type={"EXPERIENCE"} />
-         <Card type={"TIME"} />
-         <Card type={"MODE"} />
+         <Card type={"TIMEMD"} />
+         <Card type={"MODEMD"} />
          <Card type={"STARTUPS"} />
          <Card type={"WHATIDO"} />
          <Card type={"INVESTMENTS"} />

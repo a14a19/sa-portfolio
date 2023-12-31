@@ -7,7 +7,7 @@ function Footer() {
                     Created by
                 </div>
                 <div className="text-xs ms-2 font-bold">
-                    Sridhar A
+                    8ASE
                 </div>
             </div>
         </footer>
