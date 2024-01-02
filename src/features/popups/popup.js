@@ -9,14 +9,12 @@ const popupSlice = createSlice({
     name: "popup",
     initialState,
     reducers: {
-        isHide: (state, { payload }) => {
+        isHide: (state) => {
             state.hideShow = false;
-            console.log(state, payload)
         },
         isShow: (state, { payload }) => {
             state.hideShow = true;
             state.title = payload.title;
-            console.log(state, payload)
         },
     }
 })

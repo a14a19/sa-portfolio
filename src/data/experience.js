@@ -9,11 +9,11 @@ export const experience = [
         description: "Driving investment strategies, cultivating relationships, and providing strategic leadership to accelerate the growth and success of portfolio companies.",
         location: "- NY & LND"
     },
-    {
-        title: "Partner // SLA",
-        description: "Drive business growth and client relations in law firms, overseeing operations for efficiency and strategic management.",
-        location: "- New York"
-    },
+    // {
+    //     title: "Partner // SLA",
+    //     description: "Drive business growth and client relations in law firms, overseeing operations for efficiency and strategic management.",
+    //     location: "- New York"
+    // },
     {
         title: "Entrepreneur in Residence // VC",
         description: "Catalyzing innovation, evaluating investments, and mentoring startups for strategic growth within the venture capital landscape.",

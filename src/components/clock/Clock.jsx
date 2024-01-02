@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import "./Clock.css";
+import { useSelector } from "react-redux";
 
 function Clock() {
 
     const [value, setValue] = useState(new Date());
+    const { theme } = useSelector((store) => store.theme)
 
     useEffect(() => {
         const interval = setInterval(() => setValue(new Date()), 1000);
@@ -33,7 +35,7 @@ function Clock() {
                     transform: `rotateZ(${value.getSeconds() * 6}deg)`
                 }}
             />
-            <span className="twelve text-xs w-1 aspect-square rounded-full bg-[#d8d8d830]"></span> {/*12*/}
+            <span className={`${theme === 'black' ? 'bg-[#d8d8d830] border-[#d8d8d830]' : 'bg-gray-300 text-black border-[#00000033]'} twelve text-xs w-1 aspect-square rounded-full`}></span> {/*12*/}
 
         </div>
     )

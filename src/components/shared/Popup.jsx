@@ -5,6 +5,7 @@ import { isHide } from '../../features/popups/popup';
 
 function Popup() {
 
+    const { theme } = useSelector((store) => store.theme)
     const { hideShow, title } = useSelector((store) => store.popup)
     const dispatch = useDispatch()
 
@@ -40,7 +41,7 @@ function Popup() {
                                 leaveFrom="opacity-100 scale-100"
                                 leaveTo="opacity-0 scale-95"
                             >
-                                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-[#1e1e1e] p-6 text-left align-middle shadow-xl transition-all">
+                                <Dialog.Panel className={`${theme === 'black' ? 'bg-[#1e1e1e] border-[#d8d8d830]' : 'bg-white text-black border-[#00000033]'} w-full max-w-md transform overflow-hidden rounded-2xl p-6 text-left align-middle shadow-xl transition-all`}>
                                     <Dialog.Title
                                         as="h3"
                                         className="text-lg font-medium leading-6"
@@ -48,15 +49,28 @@ function Popup() {
                                         {title}
                                     </Dialog.Title>
                                     <div className="mt-2 min-h-[6rem]">
-                                        <p className="text-sm text-gray-500">
-                                            Coming soon...
-                                        </p>
+                                        {
+                                            title == "Jobs" ? (
+                                                <ul className='list-disc ps-4 text-sm'>
+                                                    <li>Software Engineer</li>
+                                                    <li>Product designer</li>
+                                                    {/* <li>Legal Associate</li> */}
+                                                    <li>Investment Analyst</li>
+                                                </ul>
+                                            ) :
+                                                (
+                                                    <p className="text-sm text-gray-500">
+                                                        Coming soon...
+                                                    </p>
+                                                )
+                                        }
+
                                     </div>
 
                                     <div className="mt-4">
                                         <button
                                             type="button"
-                                            className=" border border-[#d8d8d830] px-3 py-1 rounded-xl text-xs bg-[#292929]"
+                                            className={`${theme === 'black' ? 'border-[#d8d8d830]  bg-[#292929]' : 'bg-[#f6f6f6] border-[#00000033]'} border px-3 py-1 rounded-xl text-xs`}
                                             onClick={closeModal}
                                         >
                                             Close
