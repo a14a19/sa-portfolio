@@ -19,13 +19,13 @@ export const project = [
     {
         title: "Worko // Work Management Tool",
         img: worko,
-        link: "http://worko.live/",
+        link: "https://linktr.ee/joinworko",
         description: "Empowering teams to build better products, faster. We're building a world-class product & engineering team, join us."
     },
     {
         title: "iUXD // Design & Development Agency",
         img: iuxd,
-        link: "http://iuxd.agency/",
+        link: "https://www.linkedin.com/company/iuxd/",
         description: "Empowering digital success with exceptional user experiences and innovative design solutions that elevate brands."
     },
     {
