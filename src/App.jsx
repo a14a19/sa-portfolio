@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import ThemeChangeButton from "./components/ThemeChangeButton"
 import Main from "./pages/Main"
 import { useSelector, useDispatch } from "react-redux";
-import { changeTheme } from "./features/themes/themeSlice";
+import { changeTheme, initialTheme } from "./features/themes/themeSlice";
 
 function App() {
 
@@ -12,11 +12,15 @@ function App() {
 
   useEffect(() => {
     console.log(local);
-    dispatch(changeTheme({ theme: local }))
+    if (local) {
+      dispatch(initialTheme({ theme: local }))
+    } else {
+      dispatch(initialTheme({ theme: "black" }))
+    }
   }, [])
 
   return (
-    <div className={`${theme === 'black' ? 'bg-[#161616] text-[#ffffffde]' : 'bg-[#f4f4f4] text-black'}`}>
+    <div className={`${theme === 'black' ? 'bg-[#161616] text-[#ffffffde] ease-in-out duration-300' : 'bg-[#f4f4f4] text-black ease-in-out duration-300'}`}>
       <ThemeChangeButton />
       <Main />
     </div>

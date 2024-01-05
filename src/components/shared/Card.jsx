@@ -210,7 +210,7 @@ function Card(props) {
                                 className={`${theme === 'black' ? 'border-[#d8d8d830]' : ' border-[#00000033]'} flex p-2 border rounded-3xl`}
                                 to="https://topmate.io/sridhar_a"
                             >
-                                Topmate.io
+                                Book a 1-1 Meeting
                                 <p className="ml-auto">&#8599;</p>
                             </Link>
                         </div>
