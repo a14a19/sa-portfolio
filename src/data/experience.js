@@ -4,11 +4,6 @@ export const experience = [
         description: "Leading covert initiatives, navigating uncertainties, and ensuring the success of the startup through strategic planning and execution in a discreet environment.",
         location: "- Worldwide"
     },
-    {
-        title: "General Partner // Loading Fund",
-        description: "Driving investment strategies, cultivating relationships, and providing strategic leadership to accelerate the growth and success of portfolio companies.",
-        location: "- NY & LND"
-    },
     // {
     //     title: "Partner // SLA",
     //     description: "Drive business growth and client relations in law firms, overseeing operations for efficiency and strategic management.",
@@ -18,6 +13,11 @@ export const experience = [
         title: "Entrepreneur in Residence // VC",
         description: "Catalyzing innovation, evaluating investments, and mentoring startups for strategic growth within the venture capital landscape.",
         location: "- Global"
+    },
+    {
+        title: "Partner // VC",
+        description: "Driving investment strategies, cultivating relationships, and providing strategic leadership to accelerate the growth and success of portfolio companies.",
+        location: "- NY & LND"
     },
     {
         title: "Founder // iUXD Studio",
